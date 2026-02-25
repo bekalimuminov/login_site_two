@@ -23,12 +23,6 @@ export const auth = defineStore('auth' , {
             }else {
                 router.push("/login")
             }
-        },
-
-        lagout(){
-            this.token = null;
-            localStorage.removeItem("token");
-            router.push("/login");
         }
     }
 })

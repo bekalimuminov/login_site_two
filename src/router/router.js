@@ -4,12 +4,21 @@ import Home from "../components/Home.vue";
 import Login from "../pages/login.vue";
 
 import { auth } from "../stores/auth.js";
+import About from "../pages/About.vue";
 
 const routes = [
     {
         path: '/',
         name: 'Home',
         component: Home,
+        meta:{
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: About,
         meta:{
             requiresAuth: true
         }

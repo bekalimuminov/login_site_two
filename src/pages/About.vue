@@ -1,6 +1,6 @@
 <template>
   <router-view/>
-  <router-link class="ml-[980px] mt-[10px] text-[40px] text-red-400" to="/about">About</router-link>
+  <router-link class="ml-[980px] mt-[10px] text-[40px] text-red-400" to="/">Home</router-link>
   <pre class="text-white">
     {{ Data }}
   </pre>
@@ -16,7 +16,7 @@ const loading = ref(false)
 async function getData() {
   try{
     loading.value = true
-    const res = await customApi.get(`${import.meta.env.VITE_BASE_URL}/Accounts/users`,{
+    const res = await customApi.get(`${import.meta.env.VITE_BASE_URL}/Courses`,{
       headers: {
         Authorization: `Bearer ${token}`
       }
