@@ -1,9 +1,16 @@
 <template>
   <router-view/>
   <router-link class="ml-[980px] mt-[10px] text-[40px] text-red-400" to="/about">About</router-link>
-  <pre class="text-white">
-    {{ Data }}
-  </pre>
+  <div class="max-w-[1400px] w-full mx-auto">
+    <div class="flex flex-wrap gap-y-10 justify-around">
+      <div class="text-white text-center font-bold py-5 rounded-xl shadow-lg shadow-white w-[300px] p-3" v-for="item in Data">
+        <p>{{item.id}}</p>
+        <p>{{item.fullName}}</p>
+        <p>{{item.username}}</p>
+        <p>{{item.phoneNumber}}</p>
+      </div>
+    </div>
+  </div>
 </template>
 <script setup>
 import { ref } from "vue";
